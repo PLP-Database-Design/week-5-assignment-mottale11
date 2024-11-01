@@ -1,4 +1,4 @@
-// Import pacakges
+// To Import pacakges
 const express = require('express');
 // create framework
 const app = express();
@@ -36,7 +36,7 @@ app.set('views', __dirname + '/views');
 
 // Retrieve data
 app.get('/data', (req, res) =>{
-    // retrieve patient data
+    // To retrieve patient data
     db.query('SELECT * FROM patients', (err, results) =>{
         if(err){
             console.error(err);
@@ -45,7 +45,7 @@ app.get('/data', (req, res) =>{
             res.render('data', {results:results})
         }
     })
-    // retrieve providers data
+    // To retrieve providers data
     db.query('SELECT * FROM providers', (err, results) =>{
         if(err){
             console.error(err);
